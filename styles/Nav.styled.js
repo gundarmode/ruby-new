@@ -45,9 +45,9 @@ export const NavStyled = styled.div `
         }
     }
     .nav {
-        position:absolute;top:0; right:0; background:rgba(0,0,0,0.8); z-index:1;transform:translate(200%); transition:all ease .2s; padding:40px;
+        position:absolute;top:0; right:0; background:rgba(0,0,0,0.8); z-index:1;transform:translate(200%); transition:all ease .2s; padding:40px; opacity:0; visibility:hidden;
         &.active{
-             transform:translate(0); transition:all ease .2s;
+             transform:translate(0); transition:all ease .2s; opacity:1; visibility:visible;
         }
         li {
             &:before {display:none;}
