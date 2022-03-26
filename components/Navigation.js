@@ -27,12 +27,12 @@ const images = [
 	}		
 ]
 
-const Navigation = ({navAnimation, setNavAnimation, windowWidth, windowHeight, display}) => {
+const Navigation = ({windowWidth, windowHeight, display}) => {
 	const[navButton, setNavButton] = useState(false)
 
 	return (		
 		<NavStyled>
-			<div className={`main-nav${navAnimation ? " active" : ""}`}>
+			<div className="main-nav active">
 				
 				<Link href="/"><div className='logo'><img src={display ? logo : logo2} alt="Logo" /></div></Link>
 				<button className={`nav-button${navButton ? " active" : ""}${display ? " alt" : ""}`} onClick={() => {setNavButton(!navButton)}}></button>

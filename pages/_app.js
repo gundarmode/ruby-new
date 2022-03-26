@@ -7,7 +7,6 @@ import { useRouter } from 'next/router'
 
 function MyApp({ Component, pageProps}) {
 
-    const[navAnimation,setNavAnimation] = useState(true)
     const [display, setDisplay] = useState(false);
 
 	// Init window width and height
@@ -30,6 +29,8 @@ function MyApp({ Component, pageProps}) {
 		
 		// Get window dimensions everytime it is resized
 		window.onresize = updateSize
+
+		
 	}, [])
 
     useEffect(() => {
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps}) {
     return (
         <ThemeProvider theme={lightTheme} key={router.asPath}>
             <GlobalStyles />
-            <Navigation navAnimation={navAnimation} setNavAnimation={setNavAnimation} windowWidth={size.windowWidth} windowHeight={size.windowHeight} display={display} router={router} />
+            <Navigation windowWidth={size.windowWidth} windowHeight={size.windowHeight} display={display} router={router} />
             <Component windowWidth={size.windowWidth} windowHeight={size.windowHeight} {...pageProps} router={router} headerRef={headerRef} />
         </ThemeProvider>
     )
