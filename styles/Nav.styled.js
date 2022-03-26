@@ -56,10 +56,13 @@ export const NavStyled = styled.div `
             color:#fff; font-size:24px; margin-bottom:30px;
         }
         button {
-            background:none; border:none; cursor: pointer; color:#fff; font-size:24px; font-weight:700;
+            background:none; border:none; cursor: pointer; color:#fff; font-size:24px; font-weight:700; text-align:left;
+            @media(max-width:${MediaQueries.mediumDevices}) {
+                font-size:18px;
+            }
         }
         a {
-            text-decoration:none; color:#fff;
+            text-decoration:none; color:#fff; text-align:left;
             &:hover {
                 color:#f5b800;
             }
