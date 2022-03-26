@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {useState, useEffect} from "react";
 import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 
 export default function Home({windowWidth, windowHeight, router, display, animationEffectTimed}) {
 
@@ -20,6 +21,7 @@ export default function Home({windowWidth, windowHeight, router, display, animat
       </Head>
      
       <Header windowWidth={windowWidth} windowHeight={windowHeight} router={router} display={display} animationEffectTimed={animationEffectTimed} />
+      <Navigation windowWidth={windowWidth} windowHeight={windowHeight} display={display} router={router} />
     </>
   )
 }
