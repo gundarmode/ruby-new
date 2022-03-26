@@ -28,11 +28,26 @@ const images = [
 ]
 
 const Navigation = ({windowWidth, windowHeight, display}) => {
+
 	const[navButton, setNavButton] = useState(false)
+	const[loading, setLoading] = useState(true)
+
+	useEffect(() => {
+		
+		let navtimer = setTimeout(() => {
+			setLoading(false)
+		}, 1000)
+
+		return () => {
+			clearTimeout(navtimer)
+		}
+
+	}, [])
+
 
 	return (		
 		<NavStyled>
-			<div className="main-nav active">
+			<div className={`main-nav${loading ? "" : " active"}`}>
 				
 				<Link href="/"><div className='logo'><img src={display ? logo : logo2} alt="Logo" /></div></Link>
 				<button className={`nav-button${navButton ? " active" : ""}${display ? " alt" : ""}`} onClick={() => {setNavButton(!navButton)}}></button>
