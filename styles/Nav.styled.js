@@ -3,10 +3,7 @@ import { MediaQueries } from "./MediaQueries"
 
 export const NavStyled = styled.div `
     .main-nav {
-      justify-content:space-between; padding:50px; position:absolute; top:0; z-index:99; width:100%; opacity:0; visibility:hidden; z-index:-1; display:none;
-        &.active {
-           opacity:1; visibility:visible;z-index:1;display:flex;
-        }
+      justify-content:space-between; padding:50px; position:absolute; top:0; z-index:99; width:100%; display:flex;
         .logo {
             img {
                 width:200px; cursor:pointer;
